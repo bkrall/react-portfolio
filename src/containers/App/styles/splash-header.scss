@@ -1,0 +1,144 @@
+// Splash header
+// Inspired by http://codepen.io/michaeldoyle/pen/gbgeYo
+
+:global(body) {
+  .browser-wrapper {
+    height: 300px;
+    margin: 15px auto 45px;
+
+    // Desktop and up
+    @media(min-width: $screen-md) {
+      height: 425px;
+    }
+  }
+
+  .browser {
+    width: 90%;
+    max-width: 100%;
+    height: 90%;
+    max-height: 320px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 7px 7px 0 0;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    position: absolute;
+
+    // Tablet to desktop
+    @media(min-width: $screen-sm) and (max-width: $screen-md) {
+      max-height: 280px;
+    }
+
+    // Desktop and up
+    @media(min-width: $screen-md) {
+      max-height: 320px;
+    }
+  }
+
+  .browser-top {
+  	width: 100%;
+  	height: 2em;
+  	background: #eaeaea;
+  	border-radius: 7px 7px 0 0;
+  	position: relative;
+  }
+
+  .tab-favicon {
+    margin: 6px 3px 0 5px;
+  }
+
+  .tab {
+    height: 28px;
+    width: 70px;
+    background: darken(#eaeaea, 5%);
+    border:1px solid $gray;
+    // cursor: pointer;
+    float: left;
+    margin: 1px 3px 0 -3px;
+    transform: perspective(100px) rotateX(30deg);
+    transition: .3s all ease;
+
+    span {
+      transform-style: preserve-3d;
+      transform: perspective(-100px) rotateX(-30deg); // reset transform on children
+    }
+
+    // Mobile only
+    @media(max-width: 550px) {
+      &:nth-last-child(-n+10) {
+        display: none;
+      }
+    }
+
+    // Tweakpoint
+    @media(min-width: 550px) and (max-width: $screen-sm) {
+      &:nth-last-child(-n+8) {
+        display: none;
+      }
+    }
+
+
+    // Tablet and up
+    @media(min-width: $screen-sm) and (max-width: $screen-md) {
+      &:nth-last-child(-n+5) {
+        display: none;
+      }
+    }
+
+    // Desktop and up
+    @media(min-width: $screen-md) and (max-width: 1200px) {
+      &:nth-last-child(-n+3) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      background: lighten(#eaeaea, 5%);
+    }
+
+    &.tab-first {
+      margin-left: 80px;
+    }
+    &.tab-active {
+      background: #fff;
+    }
+  }
+
+  .browser-dots {
+    height: 1em;
+  	width: 1em;
+    left: 0.65em;
+  	background: #fd5e59;
+    border: 1px solid #df443f;
+    transform: translateY(-50%) scale(0.7);
+  }
+
+  .browser-dots, .browser-dots:before, .browser-dots:after {
+  	position: absolute;
+  	top: 50%;
+  	border-radius: 100%;
+
+  }
+
+  .browser-dots:before,
+  .browser-dots:after {
+    content: '';
+    height: 1em;
+  	width: 1em;
+    transform: translateY(-50%);
+  }
+
+  .browser-dots:before {
+  	left: 1.5em;
+  	background: #ffbb3b;
+    border: 1px solid #df9e2c;
+  }
+
+  .browser-dots:after {
+  	left: 3em;
+  	background: #34c748;
+    border: 1px solid #29aa32;
+  }
+}
