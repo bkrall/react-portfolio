@@ -1,5 +1,65 @@
+// Global styles
+@import './src/stylesheets/global';
+
 // Header
 
 :local(.styles) {
+  .top-header {
+    background: $highlight-color;
+    border-bottom: 1px solid $gray;
+    color: $main-color;
+    padding: 1.5rem 1rem;
 
+      // Remove global link border on social icons
+      a {
+        border-bottom: none;
+          &:after {
+            background: transparent; // reset global link hover style
+          }
+      }
+  }
+
+  .status {
+      color: $main-color;
+      display: inline-block;
+      font-family: $body-font;
+      font-size: 18px;
+      font-weight: 400;
+      padding-left: 0;
+      display: none;
+
+      // Tablet breakpoint
+      @media(min-width: $screen-md) {
+        padding-left: 15px;
+        display: inline-block;
+      }
+  }
+
+  .shrugs {
+      color: $main-color;
+      font-weight: 600;
+  }
+
+  .social {
+    font-size: 24px;
+    // FontAwesome
+    .fa {
+      margin: 12px 6px;
+      position: relative;
+      transition: .3s all ease;
+      top: 0;
+
+      &.fa-github {color: #000;}
+      &.fa-linkedin-square {color: #007bb6;}
+      &.fa-codepen {color: #000;}
+      &.fa-spotify {color: #82d564;}
+      &.fa-reddit {color: #ff3f18;}
+      &.fa-medium {color: #0be370;}
+
+      &:hover {
+        top: -4px;
+      }
+    }
+
+  }
 }

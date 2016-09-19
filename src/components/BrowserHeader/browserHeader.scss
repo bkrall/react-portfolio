@@ -1,8 +1,12 @@
-// Splash header
+// Global styles
+@import './src/stylesheets/global';
+
+// Browser header
 // Inspired by http://codepen.io/michaeldoyle/pen/gbgeYo
 
-:global(body) {
-  .browser-wrapper {
+:local(.styles) {
+
+    // Browser wrapper
     height: 300px;
     margin: 15px auto 45px;
 
@@ -10,7 +14,6 @@
     @media(min-width: $screen-md) {
       height: 425px;
     }
-  }
 
   .browser {
     width: 90%;
@@ -103,9 +106,7 @@
   .tab {
     height: 28px;
     width: 120px;
-    // background: darken(#eaeaea, 5%);
     border:1px solid $gray;
-    // cursor: pointer;
     float: left;
     margin: 1px 3px 0 -3px;
     transform: perspective(100px) rotateX(30deg);
@@ -168,4 +169,78 @@
   	background: #34c748;
     border: 1px solid #29aa32;
   }
+
+
+    .heading-title {
+      background-repeat: no-repeat;
+      max-width: 100%;
+      padding: 20px 15px 20px 15px;
+      position: relative;
+      text-align: center;
+      transition: .3s all ease;
+
+      // Tablet and up
+      @media(min-width: $screen-sm) {
+          padding: 60px 50px 20px 115px;
+          text-align: left;
+      }
+
+      h1 {
+        color: $main-color;
+        font-family: $title-font;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 0;
+        max-width: 800px;
+
+        &:hover {
+            transition: transform 0.2s, -webkit-transform 0.2s;
+        }
+
+        // Tablet and up
+        @media(min-width: $screen-sm) {
+          font-size: 24px;
+        }
+
+        // Desktop and up
+        @media(min-width: $screen-md) {
+          font-size: 34px;
+        }
+
+
+      }
+
+      .bio-pic {
+        border: 1px solid $gray;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 30px;
+        width: 60px;
+
+        // Tablet and up
+        @media(min-width: $screen-sm) {
+          margin: 0;
+          top: 80px;
+          left: 30px;
+          top: 60px;
+          position: absolute;
+        }
+      }
+
+      // Get in touch
+      a {
+        color: $main-color;
+        display: block;
+        font-weight: 600;
+        margin: 20px 0 20px;
+        transition: all 0.3s;
+
+        // Tablet and up
+        @media(min-width: $screen-sm) {
+          margin-bottom: 40px;
+        }
+      }
+
+    }
 }

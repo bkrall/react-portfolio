@@ -1,0 +1,37 @@
+// Global styles
+@import './src/stylesheets/global';
+
+:global(body) {
+  // Layout
+  .micro-container {
+    border-bottom: 1px solid $gray;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 30px 15px;
+
+    // Tablet and up
+    @media(min-width: $screen-sm) {
+      display: flex;
+    }
+
+    &.mobile-last {
+      // Mobile only
+      @media(max-width: $screen-sm) {
+        border-bottom: none;
+      }
+    }
+    &.last {
+      border-bottom: none;
+    }
+
+    .micro-item {
+      text-align: center;
+      img {
+        border: 5px solid #eee;
+        max-width: 100%;
+      }
+    }
+  }
+}

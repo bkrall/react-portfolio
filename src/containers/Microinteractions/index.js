@@ -4,6 +4,14 @@ import { connect } from 'react-redux';
 
 import DocumentMeta from 'react-document-meta';
 
+// UI components
+import { Header } from 'components/Header';
+import { BrowserHeader } from 'components/BrowserHeader';
+import { Footer } from 'components/Footer';
+
+/* global styles for app */
+import './microInteractions.scss';
+
 const metaData = {
   title: 'Brian Krall, Sr. UI Developer in Chicago',
   description: '8+ Years of front-end development experience',
@@ -18,63 +26,40 @@ export class Microinteractions extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    ReactDOM.findDomNode(this).scrollIntoView();
+  }
+
   render() {
+    const descriptionString = "Here are some examples of design details on Whittl that I would like to highlight. It's important to take advantage of small opportunies to provide a better user experience, give a user a clearer context or just show them something cool.";
+
     return (
       <section>
         <DocumentMeta {...metaData} />
 
-        <header className="top-header">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-6">
-                <div className="site-title">
-                  @bkrall
-                  <a href="https://www.twitter.com/bkrall" target="_blank">
-                    <i className="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                </div>
-                <h3 className="status">Current status: <span className="shrugs">¯\_(ツ)_/¯</span> </h3>
-              </div>
-              <div className="col-xs-6 social text-right">
-                <a href="https://www.github.com/bkrall" target="_blank">
-                  <i className="fa fa-github" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/bkrall" target="_blank">
-                  <i className="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.medium.com/@bkrall" target="_blank">
-                  <i className="fa fa-medium" aria-hidden="true"></i>
-                </a>
-                <a href="https://open.spotify.com/user/1217009251" target="_blank">
-                  <i className="fa fa-spotify" aria-hidden="true"></i>
-                </a>
-
-              </div>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <div className="container">
 
-            <div className="col-xs-12">
-              <h1>Microinteractions</h1>
-            </div>
+          <div className="col-xs-12">
+            <BrowserHeader title="Micro-interactions" showPageDescription pageDescription={descriptionString} />
+          </div>
 
             <div className="row micro-container">
-              <div className="col-xs-12 col-sm-6 micro-item">
-                <img src="http://sideproject.io/content/images/2016/09/how-it-works-optimized.gif" alt="How it works" />
-              </div>
-
-              <div className="col-xs-12 col-sm-6 micro-item">
+              <div className="col-xs-12 col-sm-6 col-sm-push-6 micro-item ">
                 <div className="section-title micro-item">How it Works</div>
                 <p>This section was only displayed to new users and opened from a nav link.
                 The idea was to give them a <strong>quick overview of the process</strong> (Search, book, go to your appointment, etc.).
                 The "Sign up and get special offers" call-to-action launched a registration modal.</p>
               </div>
+
+              <div className="col-xs-12 col-sm-6 col-sm-pull-6 micro-item">
+                <img src="http://sideproject.io/content/images/2016/09/how-it-works-optimized.gif" alt="How it works" />
+              </div>
             </div>
 
             <div className="row micro-container">
-              <div className="col-xs-12 col-sm-6">
+              <div className="col-xs-12 col-sm-6 ">
                 <div className="section-title micro-item">Float Labels</div>
                 <p>This is a subtle interaction that let's users see a form label while filling out the form.
                 It allows you to save space like a `placeholder` attribute with the <strong>usability</strong> of a regular form label. </p>
@@ -86,15 +71,17 @@ export class Microinteractions extends Component {
             </div>
 
             <div className="row micro-container">
-              <div className="col-xs-12 col-sm-6 micro-item">
-                <img src="http://sideproject.io/content/images/2016/09/value-props-sm-optimized.gif" alt="Value props" />
-              </div>
 
-              <div className="col-xs-12 col-sm-6">
+              <div className="col-xs-12 col-sm-6 col-sm-push-6">
                 <div className="section-title micro-item">Value Props</div>
                 <p>We used <a href="https://www.optimizely.com" target="_blank">Optimizely</a> to test if reiterating our value propositions (i.e. Book 24/7, Pay and Tip Online, No Fees) would boost conversion and found a considerable increase.
                 This is a CSS transition animation to make the tab items more noticeable while scrolling.</p>
               </div>
+
+              <div className="col-xs-12 col-sm-6 col-sm-pull-6 micro-item">
+                <img src="http://sideproject.io/content/images/2016/09/value-props-sm-optimized.gif" alt="Value props" />
+              </div>
+
             </div>
 
 
@@ -111,17 +98,20 @@ export class Microinteractions extends Component {
             </div>
 
             <div className="row micro-container">
-              <div className="col-xs-12 col-sm-6 micro-item">
-                  <img src="http://sideproject.io/content/images/2016/09/storefront-optimized.gif" alt="Storefront loading" />
-              </div>
 
-              <div className="col-xs-12 col-sm-6 micro-item">
+              <div className="col-xs-12 col-sm-6 col-sm-push-6 micro-item">
                 <div className="section-title micro-item">Loading Animation</div>
                 <p>This animation was used on our native and web apps after users performed a search.
                 I converted the animation into a GIF, preserving the FPS quality and added a session cookie
                 so users only saw the animation the first time they performed a search. <strong>This way users got
                 into the appointment-booking flow faster.</strong> </p>
               </div>
+
+              <div className="col-xs-12 col-sm-6 col-sm-pull-6 micro-item">
+                  <img src="http://sideproject.io/content/images/2016/09/storefront-optimized.gif" alt="Storefront loading" />
+              </div>
+
+
             </div>
 
             <div className="row micro-container mobile-last">
@@ -165,6 +155,9 @@ export class Microinteractions extends Component {
         </div>
 
         </div>
+
+        <Footer />
+
       </section>
     );
   }

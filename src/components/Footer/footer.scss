@@ -1,0 +1,10 @@
+// Global styles
+@import './src/stylesheets/global';
+
+// Footer
+
+:local(.styles) {
+  border-top: 1px solid $gray;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}

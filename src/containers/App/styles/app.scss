@@ -1,59 +1,15 @@
-/* global styles */
-
-$highlight-color: #f1f1f1;
-$main-color: #4a4a4a;
-$gray: #ccc;
-
-$title-font: Montserrat, sans-serif;
-$body-font: Raleway, sans-serif;
-
-// Responsive breakpoints
-$screen-sm: 766px;
-$screen-md: 998px;
+// Global styles
+@import './src/stylesheets/global';
 
 @import 'fonts/all';
 @import 'typography';
 @import 'links';
 @import 'menu';
-@import 'splash-header';
 
 :global(body) {
   background: #f1f1f1 !important;  // :|
   font-family: $body-font !important; // :|
   position: relative;
-
-  // Layout
-  .micro-container {
-    border-bottom: 1px solid $gray;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin: 15px 0;
-    padding: 30px 15px;
-
-    // Tablet and up
-    @media(min-width: $screen-sm) {
-      display: flex;
-    }
-
-    &.mobile-last {
-      // Mobile only
-      @media(max-width: $screen-sm) {
-        border-bottom: none;
-      }
-    }
-    &.last {
-      border-bottom: none;
-    }
-
-    .micro-item {
-      text-align: center;
-      img {
-        border: 5px solid #eee;
-        max-width: 100%;
-      }
-    }
-  }
 
   .site-title {
     font-family: $title-font;
@@ -61,8 +17,6 @@ $screen-md: 998px;
     font-weight: 600;
     display: inline-block;
   }
-
-
   // Links
   a {
     color: $main-color;
@@ -84,12 +38,13 @@ $screen-md: 998px;
       }
 
     &:focus {
+      color: $main-color;
       text-decoration: none;
     }
 
     &:hover {
       border-bottom: 1px solid $main-color;
-      color: darken($main-color, 5%);
+      color: $main-color;
 
       &:after {
         width: 100%;
@@ -173,175 +128,12 @@ $screen-md: 998px;
     }
   }
 
-  .social {
-    font-size: 24px;
-
-    a {
-      &:after {
-        background: transparent; // reset global link hover style
-      }
-    }
-
-
-    // FontAwesome
-    .fa {
-      margin: 12px 6px;
-      position: relative;
-      transition: .3s all ease;
-      top: 0;
-
-      &.fa-github {color: #000;}
-      &.fa-linkedin-square {color: #007bb6;}
-      &.fa-codepen {color: #000;}
-      &.fa-spotify {color: #82d564;}
-      &.fa-reddit {color: #ff3f18;}
-      &.fa-medium {color: #0be370;}
-
-      &:hover {
-        top: -4px;
-      }
-    }
-
-  }
-
   // FontAwesome
   .fa {
     &.fa-twitter {color: #4099FF; font-size: 24px; margin-left: 5px;}
     &.fa-stack-overflow {color: #f48024; margin: 6px 3px 0 5px;}
     &.fa-product-hunt {color: #da552f;}
     &.fa-times {font-size: 9px;}
-  }
-
-  .top-header {
-    background: $highlight-color;
-    border-bottom: 1px solid $gray;
-    color: $main-color;
-    padding: 1.5rem 1rem;
-
-      // Remove global link border on social icons
-      a {
-        border-bottom: none;
-      }
-  }
-
-
-.status {
-    color: $main-color;
-    display: inline-block;
-    font-family: $body-font;
-    font-size: 18px;
-    font-weight: 400;
-    padding-left: 0;
-    display: none;
-
-    //
-    // // Hide on mobile
-    // @media(max-width: $screen-sm) {
-    //   display: none;
-    // }
-
-    // Tablet breakpoint
-    @media(min-width: $screen-md) {
-      padding-left: 15px;
-      display: inline-block;
-    }
-}
-
-.shrugs {
-    color: $main-color;
-    font-weight: 600;
-}
-
-  .heading-title {
-    background-repeat: no-repeat;
-    max-width: 100%;
-    padding: 20px 15px 20px 15px;
-    position: relative;
-    text-align: center;
-    transition: .3s all ease;
-
-    // Tablet and up
-    @media(min-width: $screen-sm) {
-        padding: 60px 50px 20px 115px;
-        text-align: left;
-    }
-
-    h1 {
-      color: $main-color;
-      display: inline;
-      font-family: $title-font;
-      font-size: 18px;
-      font-weight: bold;
-      max-width: 800px;
-
-      .explainer {
-        font-weight: 300;
-        // display: block;
-        // font-size: 16px;
-        // margin-top: 8px;
-        //
-        // // Tablet and up
-        // @media(min-width: $screen-sm) {
-        //   font-size: 18px;
-        //   font-weight: 400;
-        // }
-        //
-        // // Desktop and up
-        // @media(min-width: $screen-md) {
-        //   font-size: 26px;
-        // }
-
-
-      }
-
-      &:hover {
-          transition: transform 0.2s, -webkit-transform 0.2s;
-      }
-
-      // Tablet and up
-      @media(min-width: $screen-sm) {
-        font-size: 24px;
-      }
-
-      // Desktop and up
-      @media(min-width: $screen-md) {
-        font-size: 34px;
-      }
-
-
-    }
-
-    .bio-pic {
-      border: 1px solid $gray;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 30px;
-      width: 60px;
-
-      // Tablet and up
-      @media(min-width: $screen-sm) {
-        margin: 0;
-        top: 80px;
-        left: 30px;
-        top: 60px;
-        position: absolute;
-      }
-    }
-
-    // Get in touch
-    a {
-      color: $main-color;
-      display: block;
-      font-weight: 600;
-      margin: 20px 0 20px;
-      transition: all 0.3s;
-
-      // Tablet and up
-      @media(min-width: $screen-sm) {
-        margin-bottom: 40px;
-      }
-    }
-
   }
 
   .tools-and-techniques {
@@ -540,21 +332,4 @@ $screen-md: 998px;
     }
   }
 
-  .github-corner {
-
-    svg {
-      width: 50px;
-      height: 50px;
-    }
-    // Hide on mobile
-    @media(max-width: $screen-md) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  footer {
-    border-top: 1px solid $gray;
-    padding: 2rem 1.5rem;
-  }
 }
