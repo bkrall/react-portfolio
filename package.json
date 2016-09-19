@@ -99,6 +99,7 @@
     "webpack-merge": "^0.7.3"
   },
   "dependencies": {
+    "history": "^2.1.2",
     "jquery": "^2.2.0",
     "react": "^0.14.6",
     "react-burger-menu": "^1.10.4",

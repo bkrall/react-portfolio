@@ -88,6 +88,7 @@
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     margin: 3px 0 0 3px;
+    pointer-events: none;
 
     &.first {
       margin-left: 85px;
@@ -102,13 +103,18 @@
   .tab {
     height: 28px;
     width: 120px;
-    background: darken(#eaeaea, 5%);
+    // background: darken(#eaeaea, 5%);
     border:1px solid $gray;
     // cursor: pointer;
     float: left;
     margin: 1px 3px 0 -3px;
     transform: perspective(100px) rotateX(30deg);
     transition: .3s all ease;
+
+    // Chrome only
+    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+      background: darken(#eaeaea, 5%);
+    }
 
     &:hover {
       background: lighten(#eaeaea, 5%);
@@ -118,7 +124,12 @@
       margin-left: 80px;
     }
     &.tab-active {
-      background: #fff;
+
+      // Chrome only
+      @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+        background: #fff;
+      }
+
     }
   }
 

@@ -16,7 +16,7 @@ export class Home extends Component {
   render() {
     return (
       <div id="outer-container">
-      {/* <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } right /> */}
+
       <main id="page-wrap">
       <section>
         <DocumentMeta {...metaData} />
@@ -119,7 +119,7 @@ export class Home extends Component {
 
             <div className="heading-title">
               <img src="http://sideproject.io/content/images/2016/09/2547195.jpeg" className="bio-pic" width="" alt="BK" />
-              <h1>I'm a Senior UI Developer.
+              <h1 className="glitch">I am a Senior UI Developer.
               <span className="explainer"> Front-end development, responsive interfaces,
               large-scale CSS and JS.</span></h1>
               <div className="button-container">
@@ -174,6 +174,22 @@ export class Home extends Component {
                 <p>
                   <a href="https://www.whittl.com" target="_blank">Whittl</a> shutdown in Sept. 2016. We're leaving our <a href="http://itf8392.pagekite.me/start" target="_blank">staging server</a> up to showcase the team's work.
                 </p>
+
+                <div className="row">
+                  <div className="col-xs-6">
+                    <div className="featured-work">Highlighted Projects</div>
+                    <a className="featured-case" href="#" target="_blank">
+                      Yelp Partnership
+                    </a>
+                  </div>
+                  <div className="col-xs-6">
+                    <ul>
+                      <li><a href="#" target="_blank">UI kit of React components</a></li>
+                      <li><a href="https://www.duoconsulting.com/work/much-shelist" target="_blank">Much Shelist</a></li>
+                      <li><a href="https://www.duoconsulting.com/work/freeborn" target="_blank">Freeborn</a></li>
+                    </ul>
+                  </div>
+                </div>
               </section>
 
               <section className="gig">
@@ -216,7 +232,7 @@ export class Home extends Component {
                 <div className="intro">
                   <img className="company-logo" src="http://sideproject.io/content/images/2016/09/logo_liquidprint.png" width="100" alt="liQuidprint" />
                   <div className="company">liQuidprint</div>
-                  <div className="position">FE Developer =>  Sr. Front-end Developer</div>
+                  <div className="position"><span className="hidden-xs">FE Developer =>  </span>Sr. Front-end Developer</div>
                   <div className="date">
                     <i className="fa fa-calendar-o" aria-hidden="true"></i>
                     January 2008 - September 2012
@@ -242,7 +258,7 @@ export class Home extends Component {
                   <div className="col-xs-6">
                     <ul>
                       <li><a href="http://www.liquidprint.com/clientprojects/hanig's-footwear.aspx" target="_blank">Hanig's Footwear</a></li>
-                      <li><a href="http://www.liquidprint.com/clientprojects/insights-in-marketing.aspx" target="_blank">Insights in Marketing</a></li>
+                      <li><a href="http://www.liquidprint.com/clientprojects/perspectives.aspx" target="_blank">Perspectives</a></li>
                       <li><a href="#" target="_blank">Baird & Warner</a></li>
                     </ul>
                   </div>
@@ -263,7 +279,7 @@ export class Home extends Component {
             <div className="col-md-3">
 
 
-              <div className="sidebar-title">Writing on the web</div>
+              <div className="sidebar-title">My writing on the web</div>
               <ul style={{ background: '#fff', padding: '15px 20px'}}>
               <li><a href="http://sideproject.io/" target="_blank">Sideproject.io</a> - Personal blog on web and front-end dev trends</li>
               <li><a href="http://blog.invisionapp.com/from-agency-pro-to-startup-newbie-developer-edition/" target="_blank">InVision App Blog</a> - From Agency Pro to Startup Newbie</li>
@@ -382,9 +398,9 @@ export class Home extends Component {
         <footer className="text-center">
           <strong>&copy; 2016 Brian Krall.</strong> &nbsp;
           Built with React, Sass, and Git. 💻 &nbsp;
-          <strong>&nbsp; <a href="https://github.com/bkrall/react-portfolio" target="_blank">See the source. 🔓 &nbsp;</a></strong>
-          {/* Use for micro-interactions page
-          <br/> <a href="#" style={{display: 'inline-block', marginTop: '15px'}}>The 😈  is in the details.</a> */}
+          <strong>&nbsp; <a href="https://github.com/bkrall/react-portfolio" target="_blank">See the code.</a>&nbsp;🔓</strong>
+          {/* Use for micro-interactions page */}
+          <br/> <a href="/#/microinteractions" style={{display: 'inline-block', marginTop: '15px'}}>The 😈&nbsp; is in the details.</a>
         </footer>
 
       </section>
