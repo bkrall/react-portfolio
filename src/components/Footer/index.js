@@ -1,30 +1,22 @@
 import React, { Component } from 'react';
 
 /* component styles */
-import { styles } from './styles.scss';
+import { styles } from './footer.scss';
 
-export class Footer extends Component {
-
+export class AppBar extends Component {
   render() {
+    const { appBarText } = this.props;
     return (
-      <footer className={`${styles}`}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <a className="github-button"
-              href="https://github.com/anorudes/redux-easy-boilerplate"
-              data-icon="octicon-star"
-              data-count-href="/anorudes/redux-easy-boilerplate/stargazers"
-              data-count-api="/repos/anorudes/redux-easy-boilerplate#stargazers_count"
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star anorudes/redux-easy-boilerplate on GitHub"
-            >
-              Star
-            </a>
-            </div>
-          </div>
-        </div>
+      <footer className="text-center">
+        <strong>&copy; 2016 Brian Krall.</strong> &nbsp;
+        Built with React, Sass, and Git. 💻 &nbsp;
+        <strong>&nbsp; <a href="https://github.com/bkrall/portfolio" target="_blank">See the source. 🔓 &nbsp;</a></strong>
+        <br/> <a href="#" style={{display: 'inline-block', marginTop: '15px'}}>The 😈  is in the deaaaatails.</a>
       </footer>
     );
   }
 }
+
+AppBar.propTypes = {
+  appBarText: React.PropTypes.string,
+};

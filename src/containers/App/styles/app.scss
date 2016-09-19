@@ -29,16 +29,39 @@ $screen-md: 998px;
     display: inline-block;
   }
 
+
   // Links
   a {
     color: $main-color;
-    border-bottom: 2px solid $gray;
+    border-bottom: 1px solid $gray;
     display: inline-block;
     font-weight: 600;
     transition: .3s all ease;
+    position: relative;
+
+      &:after {
+        position: absolute;
+        transition: .3s;
+        content: '';
+        width: 0;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background: $main-color;
+      }
+
+    &:focus {
+      text-decoration: none;
+    }
+
     &:hover {
-      border-bottom: 2px solid $main-color;
-      color: darken($main-color, 20%);
+      border-bottom: 1px solid $main-color;
+      color: darken($main-color, 5%);
+
+      &:after {
+        width: 100%;
+        left: 0;
+      }
     }
   }
 
@@ -52,6 +75,14 @@ $screen-md: 998px;
       margin: 0 !important; //override .heading-title
       padding: 0;
       border: none;
+
+      &:after {
+        background: transparent; // reset global link hover style
+      }
+
+      &:hover {
+        border-bottom: none;
+      }
     }
   }
   button {

@@ -49,32 +49,20 @@
     margin: 6px 3px 0 5px;
   }
 
-  .tab {
-    height: 28px;
-    width: 70px;
-    background: darken(#eaeaea, 5%);
-    border:1px solid $gray;
-    // cursor: pointer;
+  .tab-container {
     float: left;
-    margin: 1px 3px 0 -3px;
-    transform: perspective(100px) rotateX(30deg);
-    transition: .3s all ease;
-
-    span {
-      transform-style: preserve-3d;
-      transform: perspective(-100px) rotateX(-30deg); // reset transform on children
-    }
+    position: relative;
 
     // Mobile only
     @media(max-width: 550px) {
-      &:nth-last-child(-n+10) {
+      &:nth-last-child(-n+6) {
         display: none;
       }
     }
 
     // Tweakpoint
     @media(min-width: 550px) and (max-width: $screen-sm) {
-      &:nth-last-child(-n+8) {
+      &:nth-last-child(-n+4) {
         display: none;
       }
     }
@@ -82,17 +70,45 @@
 
     // Tablet and up
     @media(min-width: $screen-sm) and (max-width: $screen-md) {
-      &:nth-last-child(-n+5) {
+      &:nth-last-child(-n+3) {
         display: none;
       }
     }
 
     // Desktop and up
     @media(min-width: $screen-md) and (max-width: 1200px) {
-      &:nth-last-child(-n+3) {
+      &:nth-last-child(-n+1) {
         display: none;
       }
     }
+  }
+
+  .chrome-tab-info {
+    position: absolute;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 3px 0 0 3px;
+
+    &.first {
+      margin-left: 85px;
+    }
+  }
+
+  .meta-title {
+    display: inline-block;
+    margin-left: 3px;
+  }
+
+  .tab {
+    height: 28px;
+    width: 120px;
+    background: darken(#eaeaea, 5%);
+    border:1px solid $gray;
+    // cursor: pointer;
+    float: left;
+    margin: 1px 3px 0 -3px;
+    transform: perspective(100px) rotateX(30deg);
+    transition: .3s all ease;
 
     &:hover {
       background: lighten(#eaeaea, 5%);

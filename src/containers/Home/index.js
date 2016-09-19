@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import DocumentMeta from 'react-document-meta';
 // import Menu from 'react-burger-menu/lib/menus/scaleDown';
 import ReactTooltip from 'react-tooltip';
-import GithubCorner from 'react-github-corner';
 
 const metaData = {
   title: 'Brian Krall, Sr. UI Developer in Chicago',
@@ -59,31 +58,63 @@ export class Home extends Component {
           <div className="browser">
             <div className="browser-top">
               <div className="browser-dots"></div>
-              <div className="tab tab-first tab-active">
-                <i className="fa fa-terminal tab-favicon"></i>
-                Brian K
+
+              <div className="tab-container">
+                <div className="tab tab-first tab-active"></div>
+                <div className="chrome-tab-info first">
+                  <i className="fa fa-terminal tab-favicon"></i>
+                  <span className="meta-title">Brian Krall, Sr.</span>
+                </div>
               </div>
-              <div className="tab"><i className="fa fa-github tab-favicon" aria-hidden="true"></i> GitHu</div>
-              <div className="tab"><i className="fa fa-codepen tab-favicon" aria-hidden="true"></i> Code</div>
-              <div className="tab"><i className="fa fa-product-hunt tab-favicon" aria-hidden="true"></i> Produ</div>
-              <div className="tab"><i className="fa fa-stack-overflow" aria-hidden="true"></i> Stack</div>
-              <div className="tab"><i className="fa fa-stack-overflow" aria-hidden="true"></i> Stack</div>
-              <div className="tab"><i className="fa fa-stack-overflow" aria-hidden="true"></i> Stack</div>
-              <div className="tab"><i className="fa fa-stack-overflow" aria-hidden="true"></i> Stack</div>
-              <div className="tab"><i className="fa fa-stack-overflow" aria-hidden="true"></i> Stack</div>
-              <div className="tab"><i className="fa fa-stack-overflow" aria-hidden="true"></i> Stack</div>
-              <div className="tab">
-                <i className="fa fa-stack-overflow" aria-hidden="true"></i>
-                Stack
+
+              <div className="tab-container">
+                <div className="tab"></div>
+                <div className="chrome-tab-info">
+                  <i className="fa fa-github tab-favicon" aria-hidden="true"></i>
+                  <span className="meta-title">GitHub</span>
+                </div>
               </div>
-              <div className="tab">
-                <i className="fa fa-stack-overflow" aria-hidden="true"></i>
-                Stack
+
+              <div className="tab-container">
+                <div className="tab"></div>
+                <div className="chrome-tab-info">
+                  <i className="fa fa-codepen tab-favicon" aria-hidden="true"></i>
+                  <span className="meta-title">CodePen</span>
+                </div>
               </div>
-              <div className="tab">
-                <i className="fa fa-stack-overflow" aria-hidden="true"></i>
-                Stack
+
+              <div className="tab-container">
+                <div className="tab"></div>
+                <div className="chrome-tab-info">
+                  <i className="fa fa-product-hunt tab-favicon" aria-hidden="true"></i>
+                  <span className="meta-title">Produt Hunt</span>
+                </div>
               </div>
+
+              <div className="tab-container">
+                <div className="tab"></div>
+                <div className="chrome-tab-info">
+                  <i className="fa fa-stack-overflow" aria-hidden="true"></i>
+                  <span className="meta-title">Stack Overflow</span>
+                </div>
+              </div>
+
+              <div className="tab-container">
+                <div className="tab"></div>
+                <div className="chrome-tab-info">
+                  <i className="fa fa-stack-overflow" aria-hidden="true"></i>
+                  <span className="meta-title">Stack Overflow</span>
+                </div>
+              </div>
+
+              <div className="tab-container">
+                <div className="tab"></div>
+                <div className="chrome-tab-info">
+                  <i className="fa fa-stack-overflow" aria-hidden="true"></i>
+                  <span className="meta-title">Stack Overflow</span>
+                </div>
+              </div>
+
             </div>
 
             <div className="heading-title">
@@ -218,7 +249,7 @@ export class Home extends Component {
 
                   <div className="button-container" style={{ textAlign: 'left'}}>
                     <button className="button" style={{ marginTop: '30px'}}>
-                      <a href="https://github.com/bkrall/portfolio/raw/master/src/assets/bkrall_resume_2016.pdf" target="_blank">
+                      <a href="https://github.com/bkrall/react-portfolio/raw/master/src/assets/bkrall_resume_2016.pdf" target="_blank">
                         <i className="fa fa-file-pdf-o" aria-hidden="true"></i> &nbsp; Download resume
                       </a>
                     </button>
@@ -351,11 +382,11 @@ export class Home extends Component {
         <footer className="text-center">
           <strong>&copy; 2016 Brian Krall.</strong> &nbsp;
           Built with React, Sass, and Git. 💻 &nbsp;
-          <strong>&nbsp; <a href="https://github.com/bkrall/portfolio" target="_blank">See the source. 🔓 &nbsp;</a></strong>
-          <br/> <a href="#" style={{display: 'inline-block', marginTop: '15px'}}>The 😈  is in the details.</a>
+          <strong>&nbsp; <a href="https://github.com/bkrall/react-portfolio" target="_blank">See the source. 🔓 &nbsp;</a></strong>
+          {/* Use for micro-interactions page
+          <br/> <a href="#" style={{display: 'inline-block', marginTop: '15px'}}>The 😈  is in the details.</a> */}
         </footer>
 
-      <GithubCorner href="https://github.com/bkrall/portfolio" />
       </section>
       </main>
     </div>

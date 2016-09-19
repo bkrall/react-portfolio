@@ -1,36 +1,38 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 /* component styles */
-import { styles } from './styles.scss';
+import { styles } from './header.scss';
 
 export class Header extends Component {
   render() {
+
     return (
-      <header className={`${styles}`}>
+      <header className="top-header">
         <div className="container">
           <div className="row">
-            <div className="col-xs-5 col-sm-3 col-md-3 col-lg-3 logo">
-              <Link to="/">
-                Redux Easy Boilerplate
-              </Link>
+            <div className="col-xs-6">
+              <div className="site-title">
+                @bkrall
+                <a href="https://www.twitter.com/bkrall" target="_blank">
+                  <i className="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+              <h3 className="status">Current status: <span className="shrugs">¯\_(ツ)_/¯</span> </h3>
             </div>
-
-            <div className="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-              <nav>
-                <Link to="/home" activeClassName="active">
-                  Home
-                </Link>
-                <Link to="/list" activeClassName="active">
-                  Redux
-                </Link>
-              </nav>
-            </div>
-
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 hidden-xs text-right">
-              <a href="https://github.com/anorudes/redux-easy-boilerplate">
-                Fork me on GitHub
+            <div className="col-xs-6 social text-right">
+              <a href="https://www.github.com/bkrall" target="_blank">
+                <i className="fa fa-github" aria-hidden="true"></i>
               </a>
+              <a href="https://www.linkedin.com/in/bkrall" target="_blank">
+                <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.medium.com/@bkrall" target="_blank">
+                <i className="fa fa-medium" aria-hidden="true"></i>
+              </a>
+              <a href="https://open.spotify.com/user/1217009251" target="_blank">
+                <i className="fa fa-spotify" aria-hidden="true"></i>
+              </a>
+
             </div>
           </div>
         </div>
@@ -38,3 +40,7 @@ export class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+
+};
