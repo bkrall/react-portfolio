@@ -58,7 +58,9 @@
 
     // Mobile only
     @media(max-width: 550px) {
-      &:nth-last-child(-n+6) {
+
+      // Hide all 7 tabs on mobile
+      &:nth-last-child(-n+7) {
         display: none;
       }
     }
@@ -112,7 +114,7 @@
     transform: perspective(100px) rotateX(30deg);
     transition: .3s all ease;
 
-    // Chrome only
+    // Chrome only, iOS has z-index bug
     @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
       background: darken(#eaeaea, 5%);
     }
@@ -126,7 +128,7 @@
     }
     &.tab-active {
 
-      // Chrome only
+      // Chrome only, iOS has z-index bug
       @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
         background: #fff;
       }
@@ -171,76 +173,116 @@
   }
 
 
-    .heading-title {
-      background-repeat: no-repeat;
-      max-width: 100%;
-      padding: 20px 15px 20px 15px;
-      position: relative;
-      text-align: center;
-      transition: .3s all ease;
+  .heading-title {
+    background-repeat: no-repeat;
+    max-width: 100%;
+    padding: 20px 15px 20px 15px;
+    position: relative;
+    text-align: center;
+    transition: .3s all ease;
 
-      // Tablet and up
+    .description {
+      // Desktop and up
+      @media(min-width: $screen-md) {
+        max-width: 650px;
+        margin: 0 auto;
+      }
+    }
+
+    // Micro-interactions title
+    &.micro {
+
+      // Tablet
       @media(min-width: $screen-sm) {
-          padding: 60px 50px 20px 115px;
-          text-align: left;
+        padding-left: 50px;
+        padding-top: 30px;
       }
 
-      h1 {
-        color: $main-color;
-        font-family: $title-font;
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 0;
-        max-width: 800px;
-
-        &:hover {
-            transition: transform 0.2s, -webkit-transform 0.2s;
-        }
-
-        // Tablet and up
-        @media(min-width: $screen-sm) {
-          font-size: 24px;
-        }
-
-        // Desktop and up
-        @media(min-width: $screen-md) {
-          font-size: 34px;
-        }
-
-
+      // Tweakpoint
+      @media(min-width: 550px) and (max-width: $screen-md) {
+        padding-top: 30px;
       }
 
-      .bio-pic {
-        border: 1px solid $gray;
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto 30px;
-        width: 60px;
-
-        // Tablet and up
-        @media(min-width: $screen-sm) {
-          margin: 0;
-          top: 80px;
-          left: 30px;
-          top: 60px;
-          position: absolute;
-        }
-      }
-
-      // Get in touch
-      a {
-        color: $main-color;
-        display: block;
-        font-weight: 600;
-        margin: 20px 0 20px;
-        transition: all 0.3s;
-
-        // Tablet and up
-        @media(min-width: $screen-sm) {
-          margin-bottom: 40px;
-        }
+      // Desktop
+      @media(min-width: $screen-md) {
+        padding-top: 60px;
       }
 
     }
+
+    // Tablet and up
+    @media(min-width: $screen-sm) {
+        padding: 60px 50px 20px 115px;
+        text-align: left;
+    }
+
+    h1 {
+      color: $main-color;
+      font-family: $title-font;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 0;
+
+
+      &:hover {
+          transition: transform 0.2s, -webkit-transform 0.2s;
+      }
+
+      .explainer {
+        font-weight: 300;
+      }
+
+      // Mobily only
+      @media(max-width: $screen-sm) {
+        text-align: center;
+      }
+
+
+      // Tablet and up
+      @media(min-width: $screen-sm) {
+        font-size: 24px;
+      }
+
+      // Desktop and up
+      @media(min-width: $screen-md) {
+        font-size: 34px;
+      }
+
+
+    }
+
+    .bio-pic {
+      border: 1px solid $gray;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 30px;
+      width: 60px;
+
+      // Tablet and up
+      @media(min-width: $screen-sm) {
+        margin: 0;
+        top: 80px;
+        left: 30px;
+        top: 60px;
+        position: absolute;
+      }
+    }
+
+    // Get in touch
+    a {
+      color: $main-color;
+      display: block;
+      font-weight: 600;
+      margin: 20px auto 20px !important; // :|
+      width: 70%;
+      transition: all 0.3s;
+
+      // Tablet and up
+      @media(min-width: $screen-sm) {
+        margin-bottom: 40px;
+        max-width: 300px;
+      }
+    }
+
+  }
 }

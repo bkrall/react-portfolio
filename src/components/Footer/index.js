@@ -10,8 +10,11 @@ export class Footer extends Component {
         <strong>&copy; 2016 Brian Krall.</strong> &nbsp;
         Built with React, Sass, and Git. 💻 &nbsp;
         <strong>&nbsp; <a href="https://github.com/bkrall/react-portfolio" target="_blank">See the code.</a>&nbsp;🔓</strong>
-        {/* Use for micro-interactions page */}
-        <br/> <a href="/#/micro-interactions" style={{display: 'inline-block', marginTop: '15px'}}>The 😈&nbsp; is in the details.</a>
+
+        <br/>
+        <span style={{display: 'inline-block', marginTop: '15px'}}>
+          Bonus content: <a href="/micro-interactions">Micro-interactions</a>
+        </span>
       </footer>
     );
   }

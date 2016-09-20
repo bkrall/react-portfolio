@@ -4,6 +4,9 @@ import DocumentMeta from 'react-document-meta';
 // UI components
 import { Header } from 'components/Header';
 import { BrowserHeader } from 'components/BrowserHeader';
+import { Gig } from 'components/Gig';
+import { FeaturedWork } from 'components/FeaturedWork';
+
 import { Tools } from 'components/Tools';
 import { Footer } from 'components/Footer';
 
@@ -26,142 +29,99 @@ export class Home extends Component {
 
         <div className="container">
           <div className="col-xs-12">
-            <BrowserHeader showBioPic title="I am a Senior UI Developer. Front-end development, responsive interfaces,
-              large-scale CSS and JS." />
+            <BrowserHeader
+              showBioPic
+              title={["I am a Senior UI Developer.", <span className="explainer"> Front-end development, responsive interfaces, large-scale CSS and JS.</span>]}
+              headingClassString="text-left"
+            />
           </div>
         </div>
 
         <section className="container">
             <div className="row">
               <div className="col-md-9">
-              <section className="gig">
 
-              {/* Gig intro */}
-              <div className="intro">
-                <img className="company-logo" src="http://sideproject.io/content/images/2016/09/logo_whittl.png" width="100" alt="Whittl"/>
-                <div className="company">Whittl</div>
-                <div className="position">Sr. UI Developer</div>
-                <div className="date">
-                    <i className="fa fa-calendar-o" aria-hidden="true"></i>
-                    January 2015 - September 2016
-                </div>
-                <div className="location">
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  Chicago, IL
-                </div>
-              </div>
+              {/* Whittl */}
+              <Gig
+                companyLogo="http://sideproject.io/content/images/2016/09/logo_whittl.png"
+                companyName="Whittl"
+                position="Sr. UI Developer"
+                date="January 2015 - September 2016"
+                location="Chicago, IL"
+                description={["Whittl is like OpenTable but for salons, spas and barbershops. Check out our article in  ", <a href="https://techcrunch.com/2015/06/25/whittl-picks-up-a-chicago-style-3-3m-series-a/" target="_blank">TechCrunch</a>,". There I was responsible for providing a unifying voice for design and engineering teams. That includes collaborating with our cofounders, designers and engineers to build new features and maintain the web app. Tools used include React, Node.js, Jade templating and Sass. Obsessive focus on performance and usability.", <p> <a href="https://www.whittl.com" target="_blank">Whittl</a> shutdown in Sept. 2016. We're leaving our <a href="http://itf8392.pagekite.me/start" target="_blank">staging server</a> up to showcase the team's work.</p>]}
+               >
+                  <FeaturedWork
+                    featuredWorkTitle="Featured Project"
+                    featuredCase="Yelp Partnership"
+                    featuredCaseLink="https://www.yelpblog.com/2016/06/yelp-platform-100000-businesses-5-new-transaction-partners"
+                  >
+                  {/* Projects in list */}
 
-                <p>
-                  Whittl is like OpenTable but for salons, spas and barbershops.
-                  Check out our article in <a href="https://techcrunch.com/2015/06/25/whittl-picks-up-a-chicago-style-3-3m-series-a/" target="_blank">TechCrunch</a>.
-                </p>
-                <p>
-                  There I was responsible for providing a unifying voice for design and engineering teams.
-                  That includes collaborating with our cofounders, designers and engineers to build great
-                  user experiences. Tools used include React, Node.js, Jade templating and Sass.
-                  Obsessive focus on performance and usability.
-                </p>
-                <p>
-                  <a href="https://www.whittl.com" target="_blank">Whittl</a> shutdown in Sept. 2016. We're leaving our <a href="http://itf8392.pagekite.me/start" target="_blank">staging server</a> up to showcase the team's work.
-                </p>
+                  </FeaturedWork>
 
+               </Gig>
+
+              {/* Duo Consulting */}
+              <Gig
+                companyLogo="http://sideproject.io/content/images/2016/09/logo_duo.png"
+                companyName="Duo Consulting"
+                position="Sr. Front-end Developer"
+                date="September 2012 - December 2014"
+                location="Chicago, IL"
+                description="Lead front-end developer on Drupal-based projects, architecting sites, optimizing for performance, and writing maintainable and scalable HTML5/CSS3 and JavaScript/jQuery. Responsive web design."
+               >
+
+                 <FeaturedWork
+                   featuredWorkTitle="Featured Case Study"
+                   featuredCase="Bloomberg Current"
+                   featuredCaseLink="https://www.duoconsulting.com/work/bloomberg"
+                 >
+                 {/* Projects in list */}
+                 <ul>
+                   <li><a href="https://www.duoconsulting.com/work/principal" target="_blank">Principal</a></li>
+                   <li><a href="https://www.duoconsulting.com/work/much-shelist" target="_blank">Much Shelist</a></li>
+                   <li><a href="https://www.duoconsulting.com/work/freeborn" target="_blank">Freeborn</a></li>
+                 </ul>
+                 </FeaturedWork>
+               </Gig>
+
+               {/* liQuidprint */}
+               <Gig
+                 companyLogo="http://sideproject.io/content/images/2016/09/logo_liquidprint.png"
+                 companyName="liQuidprint"
+                 firstGig
+                 position="Front-end Developer"
+                 date="January 2008 - September 2012"
+                 location="Lincolnwood, IL"
+                 description="Front-end web development over a variety of different technologies and CMSs across several different industries in a team environment. Resource managementand mentoring. Evolved from new grad to senior-level management"
+                >
+
+                  <FeaturedWork
+                    featuredWorkTitle="Featured Case Study"
+                    featuredCase="American Sale"
+                    featuredCaseLink="http://www.liquidprint.com/clientprojects/american-sale.aspx"
+                  >
+                  {/* Projects in list */}
+                  <ul>
+                    <li><a href="http://www.liquidprint.com/clientprojects/hanig's-footwear.aspx" target="_blank">Hanig's Footwear</a></li>
+                    <li><a href="http://www.liquidprint.com/clientprojects/perspectives.aspx" target="_blank">Perspectives</a></li>
+                    <li><a href="#" target="_blank">Baird & Warner</a></li>
+                  </ul>
+                  </FeaturedWork>
+
+                {/* Download resume */}
                 <div className="row">
-                  <div className="col-xs-6">
-                    <div className="featured-work">Highlighted Projects</div>
-                    <a className="featured-case" href="https://www.yelpblog.com/2016/06/yelp-platform-100000-businesses-5-new-transaction-partners" target="_blank">
-                      Yelp Partnership
-                    </a>
-                  </div>
-                  <div className="col-xs-6">
-                    <ul>
-                      <li>UI Kit of React components</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section className="gig">
-                <div className="intro">
-                  <img className="company-logo" src="http://sideproject.io/content/images/2016/09/logo_duo.png" width="100" alt="Duo Consulting"/>
-                  <div className="company">Duo Consulting</div>
-                  <div className="position">Sr. Front-end Developer</div>
-                  <div className="date">
-                    <i className="fa fa-calendar-o" aria-hidden="true"></i>
-                    September 2012 - December 2014
-                  </div>
-                  <div className="location">
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    Chicago, IL
-                  </div>
-                </div>
-
-                <p>
-                  Lead front-end developer on Drupal-based projects, architecting sites, optimizing
-                  for performance, and writing maintainable and scalable HTML5/CSS3 and JavaScript/jQuery. Responsive web design.
-                </p>
-
-
-                <div className="row">
-                  <div className="col-xs-6">
-                    <div className="featured-work">Featured Case Study</div>
-                    <a className="featured-case" href="https://www.duoconsulting.com/work/bloomberg" target="_blank">Bloomberg Current</a>
-                  </div>
-                  <div className="col-xs-6">
-                    <ul>
-                      <li><a href="https://www.duoconsulting.com/work/principal" target="_blank">Principal</a></li>
-                      <li><a href="https://www.duoconsulting.com/work/much-shelist" target="_blank">Much Shelist</a></li>
-                      <li><a href="https://www.duoconsulting.com/work/freeborn" target="_blank">Freeborn</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section className="gig first">
-                <div className="intro">
-                  <img className="company-logo" src="http://sideproject.io/content/images/2016/09/logo_liquidprint.png" width="100" alt="liQuidprint" />
-                  <div className="company">liQuidprint</div>
-                  <div className="position"><span className="hidden-xs">FE Developer =>  </span>Sr. Front-end Developer</div>
-                  <div className="date">
-                    <i className="fa fa-calendar-o" aria-hidden="true"></i>
-                    January 2008 - September 2012
-                  </div>
-                  <div className="location">
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                    Lincolnwood, IL
-                  </div>
-                </div>
-                <p>
-                  Front-end web development over a variety of different technologies and CMSs
-                  across several different industries in a team environment.
-                  Resource managementand mentoring. Evolved from new grad to senior-level management.
-                </p>
-
-
-                <div className="row">
-                  <div className="col-xs-6">
-                  <div className="featured-work">Featured Case Study</div>
-                  <a className="featured-case" href="http://www.liquidprint.com/clientprojects/american-sale.aspx" target="_blank">American Sale</a>
-
-                  </div>
-                  <div className="col-xs-6">
-                    <ul>
-                      <li><a href="http://www.liquidprint.com/clientprojects/hanig's-footwear.aspx" target="_blank">Hanig's Footwear</a></li>
-                      <li><a href="http://www.liquidprint.com/clientprojects/perspectives.aspx" target="_blank">Perspectives</a></li>
-                      <li><a href="#" target="_blank">Baird & Warner</a></li>
-                    </ul>
-                  </div>
-
                   <div className="button-container" style={{ textAlign: 'left'}}>
-                    <button className="button" style={{ marginTop: '30px'}}>
                       <a href="https://github.com/bkrall/react-portfolio/raw/master/src/assets/bkrall_resume_2016.pdf" target="_blank">
                         <i className="fa fa-file-pdf-o" aria-hidden="true"></i> &nbsp; Download resume
                       </a>
-                    </button>
                   </div>
-
-
                 </div>
-              </section>
+
+                </Gig>
+
+
+
             </div>
 
             <div className="col-md-3">
@@ -183,6 +143,7 @@ export class Home extends Component {
 
         </section>
 
+        {/* Footer */}
         <Footer />
 
       </section>

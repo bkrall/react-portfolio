@@ -1,0 +1,69 @@
+// Global styles
+@import './src/stylesheets/global';
+
+// Gig
+
+:local(.styles) {
+  padding: 0 15px;
+  position: relative;
+    // Tablet and up
+    @media(min-width: $screen-sm) {
+      max-width: 800px;
+      padding: 0 0 40px 150px;
+    }
+
+    .intro {
+      font-family: $title-font;
+
+      // Center gig intro on mobile
+      @media(max-width: $screen-sm) {
+        text-align: center;
+      }
+    }
+
+    // Icons
+    .fa {
+      color: #999;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+
+      img.company-logo {
+        border: 1px solid $gray;
+        border-radius: 50%;
+        margin-top: 20px;
+
+        // Tablet and up
+        @media(min-width: $screen-sm) {
+          position: absolute;
+          top: -20px;
+          left: 0;
+        }
+      }
+
+      // Remove line for first gig
+      &.firstGig {
+        &:before {
+          width: 0;
+          background: transparent;
+        }
+      }
+
+
+      // Tablet and up
+      @media(min-width: $screen-sm) {
+        &:before {
+          content: "";
+          display: block;
+          width: 2px;
+          top: 0;
+          bottom: -40px;
+          left: 50px;
+          background: $gray;
+          position: absolute;
+        }
+    }
+
+}
