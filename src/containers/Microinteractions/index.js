@@ -27,7 +27,7 @@ export class Microinteractions extends Component {
   }
 
   render() {
-    const descriptionString = "Here are some examples of key design details on Whittl that I'd like to highlight. When you focus on these opportunies to provide a great user experience, it ties everything together and delivers a much needed wholeness to the end product.";
+    const descriptionString = "Here are some examples of key design details on Whittl that I'd like to highlight. When you focus on these small opportunies you can provide a great user experience, it helps deliver a much needed wholeness to the end product.";
 
     return (
       <section>
