@@ -1,6 +1,6 @@
 bkrall.sideproject.io
 =========================
-Portfolio and below documentation based on `redux-easy-boilerplate`.
+Portfolio. Below documentation based on `redux-easy-boilerplate`.
 
 ## Installation
 ```
