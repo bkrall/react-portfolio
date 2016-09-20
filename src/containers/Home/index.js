@@ -31,8 +31,11 @@ export class Home extends Component {
           <div className="col-xs-12">
             <BrowserHeader
               showBioPic
-              title={["I am a Senior UI Developer.", <span className="explainer"> Front-end development, responsive interfaces, large-scale CSS and JS.</span>]}
+              title={["I am a Senior UI Developer.",
+                      <span className="explainer"> Front-end development, responsive interfaces, large-scale CSS and JS.</span>
+                    ]}
               headingClassString="text-left"
+              titleClass="home"
             />
           </div>
         </div>
@@ -50,12 +53,13 @@ export class Home extends Component {
                 location="Chicago, IL"
                 description={["Whittl is like OpenTable but for salons, spas and barbershops. Check out our article in  ", <a href="https://techcrunch.com/2015/06/25/whittl-picks-up-a-chicago-style-3-3m-series-a/" target="_blank">TechCrunch</a>,". There I was responsible for providing a unifying voice for design and engineering teams. That includes collaborating with our cofounders, designers and engineers to build new features and maintain the web app. Tools used include React, Node.js, Jade templating and Sass. Obsessive focus on performance and usability.", <p> <a href="https://www.whittl.com" target="_blank">Whittl</a> shutdown in Sept. 2016. We're leaving our <a href="http://itf8392.pagekite.me/start" target="_blank">staging server</a> up to showcase the team's work.</p>]}
                >
+
+                  {/* sub-component */}
                   <FeaturedWork
                     featuredWorkTitle="Featured Project"
                     featuredCase="Yelp Partnership"
                     featuredCaseLink="https://www.yelpblog.com/2016/06/yelp-platform-100000-businesses-5-new-transaction-partners"
                   >
-                  {/* Projects in list */}
 
                   </FeaturedWork>
 

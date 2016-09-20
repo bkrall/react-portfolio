@@ -11,63 +11,6 @@ export class BrowserHeader extends Component {
         <div className="browser">
           <div className="browser-top">
             <div className="browser-dots"></div>
-
-            <div className="tab-container">
-              <div className="tab tab-first tab-active"></div>
-              <div className="chrome-tab-info first">
-                <i className="fa fa-terminal tab-favicon"></i>
-                <span className="meta-title">Brian Krall, Sr.</span>
-              </div>
-            </div>
-
-            <div className="tab-container">
-              <div className="tab"></div>
-              <div className="chrome-tab-info">
-                <i className="fa fa-github tab-favicon" aria-hidden="true"></i>
-                <span className="meta-title">GitHub</span>
-              </div>
-            </div>
-
-            <div className="tab-container">
-              <div className="tab"></div>
-              <div className="chrome-tab-info">
-                <i className="fa fa-codepen tab-favicon" aria-hidden="true"></i>
-                <span className="meta-title">CodePen</span>
-              </div>
-            </div>
-
-            <div className="tab-container">
-              <div className="tab"></div>
-              <div className="chrome-tab-info">
-                <i className="fa fa-product-hunt tab-favicon" aria-hidden="true"></i>
-                <span className="meta-title">Product Hunt</span>
-              </div>
-            </div>
-
-            <div className="tab-container">
-              <div className="tab"></div>
-              <div className="chrome-tab-info">
-                <i className="fa fa-stack-overflow" aria-hidden="true"></i>
-                <span className="meta-title">Stack Overflow</span>
-              </div>
-            </div>
-
-            <div className="tab-container">
-              <div className="tab"></div>
-              <div className="chrome-tab-info">
-                <i className="fa fa-stack-overflow" aria-hidden="true"></i>
-                <span className="meta-title">Stack Overflow</span>
-              </div>
-            </div>
-
-            <div className="tab-container">
-              <div className="tab"></div>
-              <div className="chrome-tab-info">
-                <i className="fa fa-stack-overflow" aria-hidden="true"></i>
-                <span className="meta-title">Stack Overflow</span>
-              </div>
-            </div>
-
           </div>
 
           <div className={`heading-title ${titleClass}`}>
