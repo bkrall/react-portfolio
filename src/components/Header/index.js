@@ -18,7 +18,7 @@ export class Header extends Component {
                     <i className="fa fa-twitter" aria-hidden="true"></i>
                   </a>
                 </div>
-                <h3 className="status">Current status: <span className="shrugs">¯\_(ツ)_/¯</span> </h3>
+                {/*<h3 className="status">Current status: <span className="shrugs">¯\_(ツ)_/¯</span> </h3> */}
               </div>
               <div className="col-xs-6 social text-right">
                 <a href="https://www.github.com/bkrall" target="_blank">

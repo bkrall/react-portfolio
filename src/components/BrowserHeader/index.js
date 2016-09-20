@@ -40,7 +40,7 @@ export class BrowserHeader extends Component {
               <div className="tab"></div>
               <div className="chrome-tab-info">
                 <i className="fa fa-product-hunt tab-favicon" aria-hidden="true"></i>
-                <span className="meta-title">Produt Hunt</span>
+                <span className="meta-title">Product Hunt</span>
               </div>
             </div>
 
