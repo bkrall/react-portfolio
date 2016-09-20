@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-/* component styles */
-import { styles } from './featuredWork.scss';
-
 export class FeaturedWork extends Component {
   render() {
     const { featuredWorkTitle, featuredCaseLink, featuredCase } = this.props;

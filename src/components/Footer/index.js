@@ -19,7 +19,3 @@ export class Footer extends Component {
     );
   }
 }
-
-Footer.propTypes = {
-
-};

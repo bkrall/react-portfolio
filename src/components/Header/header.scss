@@ -42,6 +42,7 @@
 
   .social {
     font-size: 24px;
+    
     // FontAwesome
     .fa {
       margin: 12px 6px;
@@ -51,9 +52,7 @@
 
       &.fa-github {color: #000;}
       &.fa-linkedin-square {color: #007bb6;}
-      &.fa-codepen {color: #000;}
       &.fa-spotify {color: #82d564;}
-      &.fa-reddit {color: #ff3f18;}
       &.fa-medium {color: #0be370;}
 
       &:hover {
