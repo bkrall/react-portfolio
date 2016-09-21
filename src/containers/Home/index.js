@@ -31,7 +31,7 @@ export class Home extends Component {
           <div className="col-xs-12">
             <BrowserHeader
               showBioPic
-              title={["I am a Senior UI Developer.",
+              title={["Hey, I'm a Senior UI Developer.",
                       <span className="explainer"> Front-end development, responsive interfaces, large-scale CSS and JS.</span>
                     ]}
               headingClassString="text-left"
