@@ -21,6 +21,7 @@ const metaData = {
 export class Home extends Component {
 
   render() {
+
     return (
       <section>
         <DocumentMeta {...metaData} />
@@ -97,7 +98,7 @@ export class Home extends Component {
                  position="Front-end Developer"
                  date="January 2008 - September 2012"
                  location="Lincolnwood, IL"
-                 description="Front-end web development over a variety of different technologies and CMSs across several different industries in a team environment. Resource managementand mentoring. Evolved from new grad to senior-level management"
+                 description="Front-end web development over a variety of different technologies and CMSs across several different industries in a team environment. Resource management and mentoring. Evolved from new grad to senior-level management"
                 >
 
                   <FeaturedWork
