@@ -45,6 +45,18 @@ export class Home extends Component {
             <div className="row">
               <div className="col-md-9">
 
+            {/* Tovala */}
+            <Gig
+              companyLogo="http://sideproject.io/content/images/2016/10/tovala_logo_web.png"
+              companyName="Tovala"
+              position="Lead Front-end Developer"
+              date="October 2016 - Present"
+              location="Chicago, IL"
+              description=""
+             >
+
+             </Gig>
+
               {/* Whittl */}
               <Gig
                 companyLogo="http://sideproject.io/content/images/2016/09/logo_whittl.png"
